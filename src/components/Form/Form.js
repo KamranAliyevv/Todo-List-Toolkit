@@ -34,9 +34,7 @@ const Form = () => {
   }
 
   useEffect(()=>{
-    console.log(editData.id)
     if(editData.id){
-      console.log(editData.text)
       inputRef.current.value=editData.text;
     }
   },[editData])
