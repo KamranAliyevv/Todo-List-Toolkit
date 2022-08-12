@@ -1,0 +1,35 @@
+#todo-form{
+    height: 68px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 19px 19px 19px 65px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+#todo-form input{
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    color: #CECECE;
+    margin-right: 20px;
+}
+#todo-form input::placeholder{
+    color:#CECECE;
+}
+#todo-form button{
+    width: 29px;
+    height: 29px;
+    background-color: #00A3FF;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#todo-form button svg{
+    font-size: 23px;
+}
