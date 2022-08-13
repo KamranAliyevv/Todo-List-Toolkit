@@ -58,6 +58,11 @@
 .todo-btns {
   display: flex;
   align-items: center;
+  opacity: 0;
+}
+.todo-list ul li:hover > .todo-btns{
+  opacity: 1;
+  transition: ease 1s;
 }
 .todo-btns > div {
   width: 22px;

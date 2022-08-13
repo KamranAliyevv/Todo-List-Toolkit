@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 18px;
+    position: relative;
 }
 #todo-form input{
     width: 100%;
@@ -32,4 +33,14 @@
 }
 #todo-form button svg{
     font-size: 23px;
+}
+#todo-form .error{
+    width: 100%;
+    margin-top: 10px;
+    position: absolute;
+    bottom: -20px;
+    padding-left: 20px;
+    left: 0;
+    color: red;
+    margin-bottom: 20px;
 }
