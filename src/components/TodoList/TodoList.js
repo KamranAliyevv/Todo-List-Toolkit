@@ -9,10 +9,10 @@ import { editsave } from "../../redux/reducer/todoEditReducer";
 import {toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const TodoList = () => {
-  const notify = (text) => toast(text,{
+  const notify = (text,type) => toast(text,{
     position:"top-right",
     autoClose:5000,
-    type:"success"
+    type:type || "success"
   });
   const { todo } = useSelector((store) => store);
   const dispatch = useDispatch();
@@ -27,9 +27,14 @@ const TodoList = () => {
     notify("Item updated");
   }
   function removeAllItem(id) {
-    dispatch(removeAll());
-    dispatch(editsave({ id: null }));
-    notify("All item deleted");
+    if(todo.length>0){
+      dispatch(removeAll());
+      dispatch(editsave({ id: null }));
+      notify("All item deleted");
+    }
+    else{
+      notify("Todo is Empty","error")
+    }
   }
   function editItem(e, item) {
     e.stopPropagation();
